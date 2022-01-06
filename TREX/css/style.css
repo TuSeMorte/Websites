@@ -1,0 +1,59 @@
+body{
+    height: 90vh;
+    max-width: 97vw;
+    overflow: hidden;
+}
+
+.btn {
+	box-shadow:inset 0px 1px 0px 0px #cf866c;
+	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+	background-color:#d0451b;
+	border-radius:3px;
+	border:1px solid #942911;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:6px 24px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #854629;
+    height: 5em;
+    width:90%;
+}
+.btn:hover {
+	background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+	background-color:#bc3315;
+}
+.btn:active {
+	position:relative;
+	top:1px;
+}
+
+.green {
+    background:linear-gradient(to bottom, #368104 5%, #58bc15 100%);
+    background-color:#58bc15!important;
+    border:1px solid #122e00;
+}
+
+.green:hover{
+    background:linear-gradient(to bottom, #58bc15 5%, #368104 100%);
+	background-color:#58bc15;
+}
+
+.dinosaur{
+    background-image: url(../images/dinosaur.png);
+    bottom:0px;
+    position: absolute;
+    height:60px;
+    width:60px;
+}
+.obstacle{
+    background-image: url(../images/tri-dinosaur.png);
+    bottom: 0px;
+    position: absolute;
+    height: 60px;
+    width: 60px;
+}
+
+@media only screen and (max-width: 600px) {...}

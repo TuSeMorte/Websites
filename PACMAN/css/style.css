@@ -1,0 +1,98 @@
+.btn {
+	box-shadow:inset 0px 1px 0px 0px #cf866c;
+	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+	background-color:#d0451b;
+	border-radius:3px;
+	border:1px solid #942911;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:6px 24px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #854629;
+    height: 5em;
+    width:90%;
+}
+.btn:hover {
+	background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+	background-color:#bc3315;
+}
+.btn:active {
+	position:relative;
+	top:1px;
+}
+.btn-5em {
+    width:5em;
+    height:5em;
+}
+
+.center-text {
+    text-align: center;
+}.centered{
+    margin:auto;
+    display:block;
+}
+.grid{
+    display:flex;
+    flex-wrap: wrap;
+    height:560px;
+    width: 560px;
+    border: 1px solid #000;
+}
+.grid div{
+    height:20px;
+    width:20px;
+}
+.hidden {
+    display:none;
+}
+.pac-dot{
+    background-color:green;
+    border: 5px solid white;
+    box-sizing:border-box;
+}
+.pac-man {
+    background-color:yellow;
+    border-radius: 10px;
+}
+.power-pellet {
+    background-color:green;
+    border-radius: 10px;
+}
+
+.wall{
+    background-color:blue;
+}
+
+.blinky {
+    background-color:red;
+    border:0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.pinky {
+    background-color:pink;
+    border:0; 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.inky {
+    background-color:cyan;
+    border:0; 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.clyde {
+    background-color:orange;
+    border:0; 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.scared-ghost {
+    background-color:aquamarine;
+    border:0; 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}

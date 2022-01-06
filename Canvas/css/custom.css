@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/* CSS Document */
+/* Tag overrides */
+body {
+	padding-top: 50px!important;
+}
+#FencingCheck-error {
+	padding-left: 15px;
+}
+/* Classes */
+.borderedGrn1 {
+	border-color: #360;
+    border-width: 1px;
+    border-style: solid;
+}
+.centered {
+	text-align:center!important;
+}
+.gradientBG {
+	background-color:rgba(0, 0, 0, 0.5);
+}
+.green {
+	color: #3C0!important;
+}
+.margin10 {
+	margin: 10px!important;
+}
+.marginAuto {
+	margin: auto!important;
+}

@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Ranger Hall of Fame</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />    
+
+	<link rel="SHORTCUT ICON" href="/common/images/logo.ico" />
+	
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/common/css/bootstrap.min.css"  type="text/css">
+    <link rel="stylesheet" href="/common/css/bootstrap-select.css" type="text/css">
+    <!-- Rename this file to fb-main.css -->
+    <link rel="stylesheet" href="/common/css/FB-Overall-Custom.css"  type="text/css">
+	<!-- Actual Local Subsite Custom File -->
+	<link rel="stylesheet" href="css/Custom.css"  type="text/css">    
+    
+
+
+        <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="/common/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="/common/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/common/js/jquery-easing.js" type="text/javascript"></script>
+<!--<script src="common/js/BenningRSS.js" type="text/javascript"></script>-->
+<script type="text/javascript" src="/common/js/bootstrap-select.js"></script>
+	<!-- Knockout JS -->
+    <script type="text/javascript" src="/common/js/knockout-3.5.0.js"></script>
+      <script type="text/javascript" src="/common/js/knockout.mapping-latest.js"></script>
+      
+    <script type="text/javascript" src="js/RHOF-View-Model.Builder.js"></script>
+    <script type="text/javascript" src="/common/js/Common-JS-Template.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#loading').fadeOut(3000);
+            $(".printBio").click (function () {
+                    var divContents = document.getElementById("BioDiv").innerHTML; 
+                
+                
+					var myWindow = window.open("", "popup","width=1000,height=600,scrollbars=yes,resizable=yes," +  
+						"toolbar=no,directories=no,location=no,menubar=no,status=no,left=0,top=0");
+					var doc = myWindow.document;
+					doc.open();
+					doc.write("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">");
+					doc.write("<html>");
+					doc.write("<head>");
+					doc.write("<link href='css/print.css' rel='stylesheet' type='text/css' />"); // your css file comes here.
+					doc.write("<title>RHOF Bios");
+					doc.write("</title>");
+					doc.write("</head>");
+					doc.write("<body>");
+                    doc.write("<input type='button' value='Print' onClick='window.print()' />");
+					doc.write(divContents); 
+					doc.write("</body>");
+					doc.write("</html>");   
+					doc.close();
+				})
+        });
+    </script>
+
+</head>
+	<body>
+    
+
+
+		<div class="container-fluid container-bg"><!--Begin Banner-->
+	        <header>
+        
+                <div class="row header-Row fixed-Top">
+                    <div class="col-12">
+                    	<nav class="navbar navbar-inverse navbar-fixed-top">
+				<div class="container-fluid">
+                                    <a  class="btn navbar-btn navbar-Toggle-Benning" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+
+                                    <span id="menuGlyph-HB" class="glyphicon glyphicon-menu-hamburger"></span>
+                                    <span class="navbar-Menu">MENU</span>
+                                    </a>
+                                    <a href="/" class="nav-army-star"> <span >HOME</span> </a>
+                                 <a  data-dismiss="modal" class="btn navbar-btn navbar-Search">
+                                         <span class="navbar-Label">SEARCH</span><span id="menuSearch" class="glyphicon glyphicon-search" aria-hidden="true" ></span>
+                                </a>
+                     <!--<button type="button" data-toggle="modal" data-target="#searchDiv" class="btn btn-default navbar-btn">                             <span class="glyphicon glyphicon-search" aria-hidden="true" ></span>
+                    </button>-->
+    
+                            </div>
+                        </nav>   
+    
+                    </div>
+                </div>
+ 
+
+<div id="header-content" class="header header-container header-content-inner">
+<div class="global-navi">
+
+  
+<!-- MODAL NAVIGATION MODAL -->                   
+                                             
+
+	<div class="modal fade" role="dialog" id="navbarMenuDiv" >
+
+		<div class="modal-dialog">
+			<div class="modal-content modal-content-nav">
+				<div class="modal-header header-Row">
+					<div class="col-12">
+                 		<nav class="navbar navbar-inverse navbar-fixed-top">
+						<div class="container-fluid">
+                                  			<a  class="btn navbar-btn close-navbar" aria-expanded="false">
+				                                <span class="sr-only">Close Menu</span>
+
+        			                	        <span id="menuGlyph-Rem" class="glyphicon glyphicon-remove"></span>
+		            	    		                <span class="navbar-Menu">CLOSE</span>
+		                                        </a>
+        		 	                        <a href="/" class="nav-army-star"> <span >HOME</span> </a>
+<a  class="btn navbar-btn navbar-Search">
+		                                        <span class="navbar-Label">SEARCH</span><span id="menuSearch-Src" class="glyphicon glyphicon-search" aria-hidden="true" ></span>
+                			                </a>
+                     					<!--<button type="button" data-toggle="modal" data-target="#searchDiv" class="btn btn-default navbar-btn">                             <span class="glyphicon glyphicon-search" aria-hidden="true" ></span>
+                    </button>-->
+    
+                            </div>
+                        </nav>   
+    
+                    </div>
+				</div><!-- /.modal-header -->			
+				<div class="modal-body no-LTR-Padding">
+                <nav id ="Mega-Menu-Nav" class="navbar navbar-inverse">
+
+                        	<noscript>
+                            	<ul class="nav navbar-nav">
+						          <li><a href="/index.html">Home</a></li>
+                                  <li><a href="/MCoE/">MCoE</a></li>
+                                  <li><a href="/Armor/">Armor</a></li>
+                                  <li><a href="/Garrison/">Garrison</a></li>
+                                  <li><a href="/Infantry/">Infantry</a></li>
+                                  <li><a href="/Tenant/">Tenant</a></li>
+                                  
+                                </ul>
+                            	
+                            </noscript>   					
+                  
+                </nav>
+
+
+
+                	
+                			</div><!-- /.col-12 -->
+				</div><!-- /.modal-body -->
+
+			</div><!-- /.Modal-content -->
+		</div><!-- /.modal-dialog -->
+	    </div>  <!-- navbarMenuDiv-->
+
+
+
+
+<div class="modal fade" role="dialog" id="searchDiv" >
+
+		<div class="modal-dialog">
+			<div class="modal-content modal-content-nav">
+				<div class="modal-header header-Row">
+					<div class="col-12">
+                 			   	<nav class="navbar navbar-inverse navbar-fixed-top">
+						<div class="container-fluid">
+                                  			<a  class="btn navbar-btn navbar-Toggle-Benning" aria-expanded="false">
+				                                <span class="sr-only">Close Menu</span>
+
+        			                	        <span id="menuGlyph" class="glyphicon glyphicon-menu-hamburger"></span>
+		            	    		                <span class="navbar-Menu">MENU</span>
+		                                        </a>
+        		 	                        <a href="/" class="nav-army-star"> <span >HOME</span> </a>
+                                			<a  class="btn navbar-btn close-search">
+		                                        <span class="navbar-Label">CLOSE</span><span id="menuSearch-Rem" class="glyphicon glyphicon-remove" aria-hidden="true" ></span>
+                			                </a>
+                     					<!--<button type="button" data-toggle="modal" data-target="#searchDiv" class="btn btn-default navbar-btn">                             <span class="glyphicon glyphicon-search" aria-hidden="true" ></span>
+                    </button>-->
+    
+                            </div>
+                        </nav>   
+    
+                    </div>
+				</div><!-- /.modal-header -->			
+				<div class="modal-body">
+
+					<div class="padTop25px padLR15">
+							<script>
+						  var imgAltTagsFix = function() {
+							$('img.gsc-branding-img').attr("alt", "Google Custom Search Branding");
+							$('input.gsc-search-button').attr('alt', "Google Custom Search Button");
+						  };
+						  window.__gcse = {
+							callback: imgAltTagsFix
+						  };
+							
+                              (function() {
+                                var cx = '017812443134011999128:gwykiebdqoa';
+                                var gcse = document.createElement('script');
+                                gcse.type = 'text/javascript';
+                                gcse.async = true;
+                                gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+       '//cse.google.com/cse.js?cx=' + cx;
+       //gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                                var s = document.getElementsByTagName('script')[0];
+                                s.parentNode.insertBefore(gcse, s);
+                              })();
+                            </script>
+                            <div class="gcse-searchbox-only"></div>
+                			</div><!-- /.Card-block -->
+
+
+				</div><!-- /.modal-body -->
+
+			</div><!-- /.Modal-content -->
+		</div><!-- /.modal-dialog -->
+	    </div>  <!-- navbarMenuDiv-->
+
+ <!-- </div>--><!-- /.global-navi -->
+</div><!-- /. header-container -->
+                        
+                 
+             
+                        
+                <div class="row bg-Color-Black top-Margin-65">
+                    <div class="container marginAuto">    
+			<div class="row"><!-- /.HeaderRow1-->
+                            <div class="col-sm-10 col-md-10 col-lg-10 push-left"> 
+                                <h1 class="title-Caps">Fort Benning</h1>
+                                <h3 class="header-Text-Line">U.S. Army Fort Benning and The Maneuver Center of Excellence</h3>
+				<hr />
+                            </div><!-- close Col-sm-7 -->
+                            <div class="hidden-xs col-sm-2 col-md-2 col-lg-2 push-left"> 
+                                <img src="/common/images/MCoE_Seal_2.png" alt="MCoE Seal" class="marginAuto img-responsive" />
+                            </div><!-- close Col-12 -->
+			</div><!-- /.HeaderRow1-->																	
+                        <div class="row"><!-- /.HeaderRow2-->
+                            <div class="col-xs-12 col-sm-12 col-md-12"> 
+                            	<div class="row social_media_icons" id="Social-Media-Icons"><!-- HeaderRow2 Inner -->
+                                	
+                                
+                                </div><!-- HeaderRow2 Inner -->
+                                
+                      
+                                
+                            </div><!-- close Col-12 -->
+						</div><!-- /.HeaderRow2-->					                        
+                    </div><!-- Close Container -->
+                </div><!-- close row -->
+			</header>    		
+    
+           	<div class="row">
+            	<div class="container marginAuto"> 
+	    			<div class="col-12">        
+				    	<h1 class="Hidden">Ranger Hall of Fame</h1>
+        	        </div><!-- close Col-12 -->
+				</div><!-- close container -->
+            </div><!-- close row -->
+    
+               
+    
+            <div id="loading"></div>
+            
+    		<div class="row padBot15px">
+            	<div class="container marginAuto">
+
+                    <div class="row">
+                        
+                        <div class="pg-filter" >
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mar-bottom5"> 
+                                <label for="xmlFilters">Filter By Last Name:&nbsp; </label><input class="xmlFilters form-control" id="xmlFilters" type="text" data-bind="value: $root.FilterNameSearch, valueUpdate: 'afterkeydown'" />
+                                
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mar-bottom5"> 
+                                <label for="selectpicker">Filter By Year(s):  </label>
+                                <select id="selectpicker" class="selectpicker" data-actions-box="true" data-bind="options: availableYears, selectedOptions: chosenYears" size="5" multiple="true"></select>
+                                
+                                &nbsp;&nbsp;
+                                <span><a class="cursor printBio" data-print="collapseZero0"><span class="glyphicon glyphicon-print" aria-hidden="true"></span>&nbsp;Print</a></span>
+                            </div>
+                            
+                            
+                        </div><!-- Close pg-filter -->
+                    </div><!-- Close row -->                 	
+
+
+				<div id="BioDiv" class="pg-content" >
+                    <div class="row"><!--Open Row --> 
+                    <!-- ko foreach: rangers -->
+                    <section data-bind="visible: filteredLastNameSearch() && filteredYear()">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                                <img alt="Image Place Holder before XML" data-bind="attr:{ src: 'photos/' + PhotoName() + '.jpg', alt: LastName() + ' Photo' }" class="marginAuto img-responsive" />
+                            </div>
+                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                                <h2 class="noTM" data-bind="text: InductionYear"></h2>
+                                <h3 class="uppercase">
+                                    <span data-bind="text: Rank"></span>
+                                    <span data-bind="text: FirstName"></span>
+                                    <span data-bind="text: MI" ></span>
+                                    <span data-bind="text: LastName" ></span>
+                                    
+                                </h3>
+                                <p data-bind="text: Citation" ></p>
+                            </div>
+                        </div>
+                        <hr class="pageBreak">
+                    </section>
+                    <!-- /ko -->
+                    <!-- Testing VM Code <table>
+                        <thead>
+                            <tr>
+                                <th>Induction Year</th>
+                                <th>First Name</th>
+                                <th>MI</th>
+                                <th>Last Name</th>
+                                <th>Type</th>
+                                <th>Citation</th>
+                                <th>Photo</th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach: rangers">
+                            <tr data-bind="visible: filteredLastNameSearch() && filteredYear()">
+                                <td data-bind="text: InductionYear"></td>
+                                <td data-bind="text: Rank"></td>
+                                <td data-bind="text: FirstName"></td>
+                                <td data-bind="text: MI"></td>
+                                <td data-bind="text: LastName"></td>
+                                <td data-bind="text: Type"></td>
+                               <td data-bind="text: Citation"></td>
+                                <td data-bind="text: PhotoName"></td>
+                            </tr>
+                        </tbody>
+                    </table>-->
+                    </div><!--Close Row -->                    	
+				</div><!--pg-content-->
+                        
+                        
+                           
+                </div><!-- /container -->
+			</div><!-- /ROW-->     
+
+		
+            
+   
+        	<footer id="footer"> 
+            		<div class="row bg-Color-Black">
+            			<div class="container marginAuto">
+                	
+                        		<h1 class="Hidden">Footer</h1>
+					<!--Employment
+FOIA
+Privacy and Security
+Accessibility/Section 508
+
+RSS Feeds
+
+Contact Us
+
+
+
+// On Current Site-->
+
+	<div id="footer-links">
+
+    <noscript>
+            <span class="centered">
+            
+                <a href="/About/">About Us</a> 
+                |
+                <a href="http://dodcio.defense.gov/DoDSection508/Std_Stmt.aspx" target="_blank">Accessibility/Section 508</a> 
+                | 
+                <a href="https://www.us.army.mil/" target="_blank">AKO</a> 
+                | 
+                <a href="https://www.army.mil/" target="_blank">Army</a> 
+                | 
+            
+                <a href="/Contact/" >Contact Us</a> 
+                | 
+                <a href="/Important-Notices/" >Important Notices</a>
+                | 
+                <a href="http://ice.disa.mil/index.cfm?fa=site&site_id=256" target="_blank">ICE</a> 
+                | 
+                <a href="http://www.myarmyonesource.com/familyprogramsandservices/iwatchprogram/default.aspx" target="_blank">iWatch </a> 
+                | 
+                <a href="/SiteMap/">Site Map</a> 
+                | 
+                <a href="http://www.tradoc.army.mil/" target="_blank">TRADOC</a> 
+                | 
+                <a href="http://www.army.mil/info/a-z/" target="_blank">Need Help? Try Army A-Z</a>
+            </span>
+                    
+    
+    </noscript>
+    
+    
+    </div>
+
+	
+	<div class="last-updated">
+    	<span class="centered">This is an official U.S. Army Website sponsored by U.S. Army Maneuver Center of Excellence (MCoE)
+<br /><b>Website Last Updated: <!-- #BeginDate format:Am1m -->November 20, 2018  9:49<!-- #EndDate --></b>
+		</span>
+	</div>
+
+				</div><!--  close container -->
+			</div><!-- close row -->  
+			<div class="row">
+				<div id="scroll-page-top">
+					<a href="#container" class="top">Back to Top</a>
+				</div>
+			</div><!-- close row -->  
+            	</footer>
+
+    </div><!-- close container-fluid-->
+	<script type="text/javascript" src="/common/js/googleanalytics.js"></script>
+    
+  </body>
+</html>
